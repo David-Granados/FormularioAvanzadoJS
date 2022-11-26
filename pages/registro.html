@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermandades de Sevilla</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/registro.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <form name="formulario" id="formulario" action="">
+            <!--Name-->
+            <label for="nombre">Nombre de usuario:</label>
+            <input type="text" name="nombre" id="nombre" />
+            <div id="log_nombre_regis"> </div>
+            
+            <!--Email-->
+            <label for="email">Correo electronico:</label>
+            <input type="email" name="email" id="email" />
+            <div id="log_email"> </div>
+
+            <label for="email_validate">Validar Correo:</label>
+            <input type="email" name="emailValidate" id="emailValidate" />
+            <div id="log_email_regis_validate"> </div>
+
+            <!--Password-->
+            <label for="pass">Contraseña:</label>
+            <input type="password" name="pass" id="pass" />
+            <div id="log_nombre_regis"> </div>
+            
+            <label for="pass_validate">Validar Contraseña:</label>
+            <input type="password" name="passValidate" id="passValidate" />
+            <div id="log_pass_regis_validate"> </div>
+
+            <input type="submit" name="btnSeguir" id="btnSeguir" value="Siguiente" />
+        </form>
+    </div>
+</body>
+
+</html>

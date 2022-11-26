@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermandades de Sevilla</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/registro-2.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <form name="formulario" id="formulario" action="../index.html">
+            <!--Hermandad-->
+            <label for="nombre">Nombre de Hermandad:</label>
+            <input type="text" name="nombre" id="nombre" />
+            <div id="log_nombre_regis"> </div>
+            
+            <!--Direccion-->
+            <label for="text">Dirección:</label>
+            <input type="text" name="direccion" id="direccion" />
+            <div id="log_direccion"> </div>
+            
+            <!--Anio creacion-->
+            <label for="number">Año de inicio:</label>
+            <input type="number" name="anio" id="anio" />
+            <div id="log_anio"> </div>
+            
+            <!--Numero de hermanos-->
+            <label for="numero_hermanos">Número de hermanos:</label>
+            <input type="number" name="numero_hermanos" id="numero_hermanos">
+            <div id="log_number"> </div>
+            
+            <!--Colores-->
+            <label for="color">Color de la hermandad</label>
+            <input type="color" name="color" id="color">
+
+            <!--Telefono-->
+            <label for="telefono">Número de hermanos:</label>
+            <input type="number" name="telefono" id="telefono">
+            <div id="log_telefono"> </div>
+
+            <input type="submit" name="btnAtras" id="btnAtras" value="Atras" />
+            <input type="submit" name="btnSeguir" id="btnSeguir" value="Siguiente" />
+        </form>
+    </div>
+</body>
+
+</html>
