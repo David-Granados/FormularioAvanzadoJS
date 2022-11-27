@@ -13,7 +13,7 @@
 
 <body>
     <div id="container">
-        <form name="formulario" id="formulario" action="../index.html">
+        <form name="formulario" id="formulario">
             <!--Hermandad-->
             <label for="nombre">Nombre de Hermandad:</label>
             <input type="text" name="nombre" id="nombre" />
@@ -43,9 +43,17 @@
             <input type="number" name="telefono" id="telefono">
             <div id="log_telefono"> </div>
 
+            <!--Plan de pago-->
+            <label for="pay">Plan de pago:</label>
+            <input type="radio" name="pago" value="mes" />Mes<br/>
+            <input type="radio" name="pago" value="trimestre" />Trimestre <br/>
+            <input type="radio" name="pago" value="semestre" />Semestre <br/>
+            <input type="radio" name="pago" value="anio" />Año <br/>
+
             <input type="submit" name="btnAtras" id="btnAtras" value="Atras" />
-            <input type="submit" name="btnSeguir" id="btnSeguir" value="Siguiente" />
+            <input type="submit" name="btnEnviar" id="btnEnviar" value="Enviar" />    
         </form>
+        
     </div>
 </body>
 
