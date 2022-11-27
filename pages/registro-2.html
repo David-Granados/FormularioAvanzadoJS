@@ -15,45 +15,53 @@
     <div id="container">
         <form name="formulario" id="formulario">
             <!--Hermandad-->
-            <label for="nombre_hermandad">Nombre de Hermandad:</label>
-            <input type="text" name="nombre_hermandad" id="nombre_hermandad" />
-            <div id="log_nombre_hermandad_regis"> </div>
-            
+            <div class="hermandad">
+                <label for="nombre_hermandad">Nombre de Hermandad:</label>
+                <input type="text" name="nombre_hermandad" id="nombre_hermandad" />
+                <div id="log_nombre_hermandad_regis"> </div>
+            </div>
             <!--Direccion-->
-            <label for="direccion">Dirección:</label>
-            <input type="text" name="direccion" id="direccion" />
-            <div id="log_direccion"> </div>
-            
+            <div class="direction">
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="direccion" id="direccion" />
+                <div id="log_direccion"> </div>
+            </div>
+
             <!--Anio creacion-->
-            <label for="anio">Año de inicio:</label>
-            <input type="number" name="anio" id="anio" />
-            <div id="log_anio"> </div>
-            
+            <div class="creation">
+                <label for="anio">Año de inicio:</label>
+                <input type="number" name="anio" id="anio" />
+                <div id="log_anio"> </div>
+            </div>
             <!--Numero de hermanos-->
-            <label for="numero_hermanos">Número de hermanos:</label>
-            <input type="number" name="numero_hermanos" id="numero_hermanos">
-            <div id="log_number"> </div>
-            
+            <div class="hermanos">
+                <label for="numero_hermanos">Número de hermanos:</label>
+                <input type="number" name="numero_hermanos" id="numero_hermanos">
+                <div id="log_number"> </div>
+            </div>
             <!--Colores-->
-            <label for="color">Color de la hermandad</label>
-            <input type="color" name="color" id="color">
-
+            <div class="colors">
+                <label for="color">Color de la hermandad</label>
+                <input type="color" name="color" id="color">
+            </div>
             <!--Telefono-->
-            <label for="telefono">Número de hermanos:</label>
-            <input type="number" name="telefono" id="telefono">
-            <div id="log_telefono"> </div>
-
+            <div class="telephone">
+                <label for="telefono">Número de hermanos:</label>
+                <input type="number" name="telefono" id="telefono">
+                <div id="log_telefono"> </div>
+            </div>
             <!--Plan de pago-->
-            <label for="pay">Plan de pago:</label>
-            <input type="radio" name="pago" value="mes" />Mes<br/>
-            <input type="radio" name="pago" value="trimestre" />Trimestre <br/>
-            <input type="radio" name="pago" value="semestre" />Semestre <br/>
-            <input type="radio" name="pago" value="anio" />Año <br/>
-
+            <div class="planpay">
+                <label for="pay">Plan de pago:</label>
+                <input type="radio" name="pago" value="mes" />Mes<br />
+                <input type="radio" name="pago" value="trimestre" />Trimestre <br />
+                <input type="radio" name="pago" value="semestre" />Semestre <br />
+                <input type="radio" name="pago" value="anio" />Año <br />
+            </div>
             <input type="submit" name="btnAtras" id="btnAtras" value="Atras" />
-            <input type="submit" name="btnEnviar" id="btnEnviar" value="Enviar" />    
+            <input type="submit" name="btnEnviar" id="btnEnviar" value="Enviar" />
         </form>
-        
+
     </div>
 </body>
 
