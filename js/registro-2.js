@@ -12,16 +12,6 @@ function leerCookie(nombre) {
 }
 
 $(document).ready(function () {
-    if ($("#nombre_hermandad").val().length < 1
-        || $("#direccion").val().length < 1
-        || $("#anio").val().length < 1
-        || $("#numero_hermanos").val().length < 1
-        //ver como se escoje color
-        || $("#color").val().length < 1
-        || $("#telefono").val().length < 1
-        || $("#pago").val().length < 1) {
-        errors = 1;
-    }
     //Nombre Hermandad
     $("#nombre_hermandad").blur(() => {
         if ($("#nombre_hermandad").val().length < 1) {
@@ -119,21 +109,20 @@ $(document).ready(function () {
 
 
     $("#btnEnviar").click(() => {
-        if (errors < 1) {
-            //Simulamos guardar el nuevo usuario en bd con localstorage
-            user.name = leerCookie("name");
-            user.email = leerCookie("email");
-            user.pass = leerCookie("pass");
-            user.hermandad = leerCookie("hermandad");
-            user.direccion = leerCookie("direccion");
-            user.anio = leerCookie("anio");
-            user.numero_hermanos = leerCookie("numero_hermanos");
-            user.color = leerCookie("color");
-            user.telefono = leerCookie("telefono");
-            user.pago = leerCookie("pago");
-            localStorage.setItem("usuario", JSON.stringify(user));
-            $("#formulario").attr("action", "inicio.html");
-        }
+        //Simulamos guardar el nuevo usuario en bd con localstorage
+        user.name = leerCookie("name");
+        user.email = leerCookie("email");
+        user.pass = leerCookie("pass");
+        user.hermandad = leerCookie("hermandad");
+        user.direccion = leerCookie("direccion");
+        user.anio = leerCookie("anio");
+        user.numero_hermanos = leerCookie("numero_hermanos");
+        user.color = leerCookie("color");
+        user.telefono = leerCookie("telefono");
+        user.pago = leerCookie("pago");
+        localStorage.setItem("usuario", JSON.stringify(user));
+        $("#formulario").attr("action", "inicio.html");
+
     });
     $("#btnAtras").click(() => {
         $("#formulario").attr("action", "registro.html");
