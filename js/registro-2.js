@@ -82,7 +82,10 @@ $(document).ready(function () {
         }
     });
     //Colores
-
+    $("#color").blur(() => {
+        console.log($("#color").val());
+        document.cookie = "color=" + $("#color").val();
+    });
     //Telefono
     $("#telefono").blur(() => {
         if ($("#telefono").val().length < 1) {
@@ -101,26 +104,28 @@ $(document).ready(function () {
         }
     });
 
+    //Plan de pago
+    $('select[name=pago]').click(() => {
+        if ($('select[name=pago]').val() != "") {
+            $("#log_pago").css("display", "none");
+            document.cookie = "pago=" + $('select[name=pago]').val();
+        } else {
+            $("#log_pago").text("Debe de elegir una opción").css("color", "red");
+            errors++;
+        }
+    });
 
-
-
-
-
-
-
-
-
-
-
-    user.name = leerCookie("name");
-    user.email = leerCookie("email");
-    user.pass = leerCookie("pass");
-    localStorage.setItem("usuario", JSON.stringify(user));
-
+    
 
 
     $("#btnEnviar").click(() => {
-
+        //Simulamos guardar el nuevo usuario en bd con localstorage
+        user.name = leerCookie("name");
+        user.email = leerCookie("email");
+        user.pass = leerCookie("pass");
+        
+        localStorage.setItem("usuario", JSON.stringify(user));
+    
         $("#formulario").attr("action", "inicio.html");
     });
     $("#btnAtras").click(() => {

@@ -53,10 +53,14 @@
             <!--Plan de pago-->
             <div class="planpay">
                 <label for="pay">Plan de pago:</label>
-                <input type="radio" id="pago" name="pago" value="mes" />Mes<br />
-                <input type="radio" id="pago" name="pago" value="trimestre" />Trimestre <br />
-                <input type="radio" id="pago" name="pago" value="semestre" />Semestre <br />
-                <input type="radio" id="pago" name="pago" value="anio" />Año <br />
+                <select name="pago" id="pago">
+                    <option value="">---</option>
+                    <option value="mes">Mes</option>
+                    <option value="trimestre">Trimestre</option>
+                    <option value="semestre">Semestre</option>
+                    <option value="anio">Año</option>
+                </select>
+                <div id="log_pago"> </div>
             </div>
             <input type="submit" name="btnAtras" id="btnAtras" value="Atras" />
             <input type="submit" name="btnEnviar" id="btnEnviar" value="Enviar" />
