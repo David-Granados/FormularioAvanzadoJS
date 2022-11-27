@@ -115,18 +115,25 @@ $(document).ready(function () {
         }
     });
 
-    
+
 
 
     $("#btnEnviar").click(() => {
-        //Simulamos guardar el nuevo usuario en bd con localstorage
-        user.name = leerCookie("name");
-        user.email = leerCookie("email");
-        user.pass = leerCookie("pass");
-        
-        localStorage.setItem("usuario", JSON.stringify(user));
-    
-        $("#formulario").attr("action", "inicio.html");
+        if (errors < 1) {
+            //Simulamos guardar el nuevo usuario en bd con localstorage
+            user.name = leerCookie("name");
+            user.email = leerCookie("email");
+            user.pass = leerCookie("pass");
+            user.hermandad = leerCookie("hermandad");
+            user.direccion = leerCookie("direccion");
+            user.anio = leerCookie("anio");
+            user.numero_hermanos = leerCookie("numero_hermanos");
+            user.color = leerCookie("color");
+            user.telefono = leerCookie("telefono");
+            user.pago = leerCookie("pago");
+            localStorage.setItem("usuario", JSON.stringify(user));
+            $("#formulario").attr("action", "inicio.html");
+        }
     });
     $("#btnAtras").click(() => {
         $("#formulario").attr("action", "registro.html");
