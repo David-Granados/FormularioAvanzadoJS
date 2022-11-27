@@ -12,7 +12,16 @@ function leerCookie(nombre) {
 }
 
 $(document).ready(function () {
-    
+    if($("#nombre_hermandad").val().length < 1
+    || $("#direccion").val().length < 1
+    || $("#anio").val().length < 1
+    || $("#numero_hermanos").val().length < 1
+    //ver como se escoje color
+    || $("#color").val().length < 1
+    || $("#telefono").val().length < 1
+    || $("#pago").val().length < 1){
+        errors = 1;
+    }
     //Nombre Hermandad
     $("#nombre_hermandad").blur(()=>{ 
         if($("#nombre_hermandad").val().length < 1){
@@ -31,28 +40,8 @@ $(document).ready(function () {
         }
     });
 
-//Ejempo
-/**
- * $("#nombre").blur(() => {
-        if ($("#nombre").val().length < 1) {
-            $("#log_nombre_regis").text("Esta vacio").css("color", "red");
-            errors++;
-        } else {
-            if (user.name !== $("#nombre").val()) {
-                $("#log_nombre_regis").css("display", "none");
-                //user.name = $("#nombre").val();
-                document.cookie = "name=" + $("#nombre").val();
-                if (errors != 0) {
-                    errors--;
-                }
-            } else {
-                $("#log_nombre_regis").text("usuario ya registrado").css("color", "red");
-                errors++;
-            }
-        }
-    });
 
- */
+
 
 
 

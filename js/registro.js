@@ -8,10 +8,10 @@ var errors = 0;
 $(document).ready(() => {
     //Nombre
     if($("#nombre").val().length < 1 
-    && $("#email").val().length < 1 
-    && $("#emailValidate").val().length < 1 
-    && $("#pass").val().length < 1 
-    && $("#passValidate").val().length < 1){
+    || $("#email").val().length < 1 
+    || $("#emailValidate").val().length < 1 
+    || $("#pass").val().length < 1 
+    || $("#passValidate").val().length < 1){
         errors=1;
     }
     $("#nombre").blur(() => {
