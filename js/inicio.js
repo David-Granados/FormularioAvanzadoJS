@@ -1,5 +1,6 @@
+var user = JSON.parse(localStorage.getItem("usuario"));
 $(document).ready(()=>{
-    var user = JSON.parse(localStorage.getItem("usuario"));
-    $("#nombres").text(user.name);
+   $("#nombre_hermandad").text(user.name);
+   $("#numero_hermanos").text(user.email);
 
 });

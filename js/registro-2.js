@@ -13,6 +13,56 @@ function leerCookie(nombre) {
 
 $(document).ready(function () {
     
+    //Nombre Hermandad
+    $("#nombre_hermandad").blur(()=>{ 
+        if($("#nombre_hermandad").val().length < 1){
+            $("#log_nombre_hermandad_regis").text("Esta vacio").css("color", "red");
+        }else{
+            if (user.hermandad !== $("#nombre_hermandad").val()) {
+                $("#log_nombre_hermandad_regis").css("display", "none");
+                document.cookie = "hermandad=" + $("#nombre_hermandad").val();
+                if (errors != 0) {
+                    errors--;
+                }
+            } else {
+                $("#log_nombre_hermandad_regis").text("Hermandad ya registrado").css("color", "red");
+                errors++;
+            }
+        }
+    });
+
+//Ejempo
+/**
+ * $("#nombre").blur(() => {
+        if ($("#nombre").val().length < 1) {
+            $("#log_nombre_regis").text("Esta vacio").css("color", "red");
+            errors++;
+        } else {
+            if (user.name !== $("#nombre").val()) {
+                $("#log_nombre_regis").css("display", "none");
+                //user.name = $("#nombre").val();
+                document.cookie = "name=" + $("#nombre").val();
+                if (errors != 0) {
+                    errors--;
+                }
+            } else {
+                $("#log_nombre_regis").text("usuario ya registrado").css("color", "red");
+                errors++;
+            }
+        }
+    });
+
+ */
+
+
+
+
+
+
+
+
+
+
     user.name = leerCookie("name");
     user.email = leerCookie("email");
     user.pass = leerCookie("pass");
